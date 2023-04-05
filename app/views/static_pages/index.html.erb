@@ -1,15 +1,6 @@
 <h2>Flickr Photo Viewer</h2>
 
-<%= form_with url: "/", method: :get do |form| %>
-  <div>
-    <%= form.label :user_id, "Enter User ID" %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div>
-    <%= form.submit "View Photos" %>
-  </div>
-<% end %>
+<%= render "search_form" %>
 
 <% if @photos %>
   <% @photos.each do |photo| %>
