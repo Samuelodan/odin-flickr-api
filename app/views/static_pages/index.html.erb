@@ -10,3 +10,9 @@
     <%= form.submit "View Photos" %>
   </div>
 <% end %>
+
+<% if @photos %>
+  <% @photos.each do |photo| %>
+    <%= image_tag "#{Flickr.url(photo)}" %>
+  <% end %>
+<% end %>
