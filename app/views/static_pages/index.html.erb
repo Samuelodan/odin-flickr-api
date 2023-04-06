@@ -1,5 +1,11 @@
 <h2>Flickr Photo Viewer</h2>
 
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
 <%= render "search_form" %>
 
 <% if @photos %>
